@@ -158,6 +158,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MyArray.h" />
     <ClInclude Include="MyPoint.h" />
     <ClInclude Include="RandomDay.h" />
     <ClInclude Include="Resource.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Space.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyArray.cpp" />
     <ClCompile Include="MyPoint.cpp" />
     <ClCompile Include="RandomDay.cpp" />
     <ClCompile Include="stdafx.cpp">

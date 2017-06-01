@@ -14,3 +14,7 @@ Ejercicio de Operators Overloading, operadores aplicados en la practica <code>++
 <h3>Versión 4</h3>
 <h5>01/06/2017</h5>
 Ejercicio de Operators Overloading, operadores aplicados en la practica <code>== != < ></code>.
+
+<h3>Versión 5</h3>
+<h5>01/06/2017</h5>
+Ejercicio de Operator Overloading, operadores == != en la clase MyArray.
