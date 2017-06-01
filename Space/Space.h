@@ -1,5 +1,6 @@
 #pragma once  //______________________________________ Space.h  
 #include "Resource.h"
+#include "MyPoint.h"
 class Space : public Win::Dialog
 {
 public:
@@ -9,6 +10,7 @@ public:
 	~Space()
 	{
 	}
+	void Display(MyPoint p);
 protected:
 	//______ Wintempla GUI manager section begin: DO NOT EDIT AFTER THIS LINE
 	Win::Textbox tbxSalida;
