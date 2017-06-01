@@ -30,3 +30,7 @@ Ejercicio de Inheritance, creación de una clase <code>My3DPoint</code> partiend
 <h3>Versión 8</h3>
 <h5>01/06/2017</h5>
 Ejercicio de Funciones virtuales, donde se declaran tres métodos de una clase como virtual para establecer que serán métodos con polimorfismo.
+
+<h3>Versión 9</h3>
+<h5>01/06/2017</h5>
+Ejercicio de Static Members, utilizando un contador y un método de tipo static para verificar si la clase ya tiene elementos creados.

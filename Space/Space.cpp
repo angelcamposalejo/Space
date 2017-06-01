@@ -4,6 +4,7 @@
 #include "RandomDay.h"
 #include "MyArray.h"
 #include "My3DPoint.h"
+#include "MyConnection.h"
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, LPTSTR cmdLine, int cmdShow) {
 	Space app;
 	return app.BeginDialog(IDI_Space, hInstance);
@@ -11,22 +12,9 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, LPTSTR cmdLine, int cmdSho
 
 void Space::Window_Open(Win::Event& e)
 {
-	My3DPoint a;
-	a.x = 10.0;
-	a.y = 12.0;
-	a.z = -10.0;
-	wstring texto;
-	Sys::Format(texto, L"Minimo: %g\r\n",a.GetMin());
-	tbxSalida.Text += texto;
-	Sys::Format(texto, L"Maximo: %g\r\n", a.GetMax());
-	tbxSalida.Text += texto;
-	Sys::Format(texto, L"Average: %g\r\n", a.GetAverage());
-	tbxSalida.Text += texto;
-	MyPoint b;
-	b.x = 11.5;
-	b.y = -5.5;
-	Sys::Format(texto, L"Minimo: %g\r\n", b.GetMin());
-	tbxSalida.Text += texto;
+	if (MyConnection::IsOpen() == true)tbxSalida.Text += L"1. Open\r\n";
+	MyConnection x;
+	if (MyConnection::IsOpen() == true)tbxSalida.Text += L"2. Open\r\n";
 }
 void Space::Display(MyPoint p)
 {

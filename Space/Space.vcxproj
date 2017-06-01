@@ -160,6 +160,7 @@
   <ItemGroup>
     <ClInclude Include="My3DPoint.h" />
     <ClInclude Include="MyArray.h" />
+    <ClInclude Include="MyConnection.h" />
     <ClInclude Include="MyPoint.h" />
     <ClInclude Include="RandomDay.h" />
     <ClInclude Include="Resource.h" />
@@ -172,6 +173,7 @@
   <ItemGroup>
     <ClCompile Include="My3DPoint.cpp" />
     <ClCompile Include="MyArray.cpp" />
+    <ClCompile Include="MyConnection.cpp" />
     <ClCompile Include="MyPoint.cpp" />
     <ClCompile Include="RandomDay.cpp" />
     <ClCompile Include="stdafx.cpp">
