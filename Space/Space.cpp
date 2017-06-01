@@ -12,14 +12,15 @@ void Space::Window_Open(Win::Event& e)
 	MyPoint a, b;
 	a.x = 2.0;
 	a.y = 3.0;
-	b = a;
-	a.x++;
-	b.y--;
-	a--;
-	b++;
-	Display(a);
-	Display(b);
-	Display(a + b);
+	b.x = -5.0;
+	b.y = -3.0;
+	if (a == b)this->tbxSalida.Text += L"It is a equals\r\n";
+	if (a != b)this->tbxSalida.Text += L"It is diferent\r\n";
+	if (a < b)this->tbxSalida.Text += L"Its a less than b\r\n";
+	if (a > b)this->tbxSalida.Text += L"Its a greater than b\r\n";
+	//Display(a);
+	//Display(b);
+	//Display(a + b);
 }
 void Space::Display(MyPoint p)
 {

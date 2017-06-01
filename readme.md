@@ -9,4 +9,8 @@ Ejercicio de Operators Overloading, entre los operadores aplicados se encuentra 
 
 <h3>Versión 3</h3>
 <h5>01/06/2017</h5>
-Ejercicio de Operator Overloading, operadores aplicados en la practica <code>++ --</code>.
+Ejercicio de Operators Overloading, operadores aplicados en la practica <code>++ --</code>.
+
+<h3>Versión 4</h3>
+<h5>01/06/2017</h5>
+Ejercicio de Operators Overloading, operadores aplicados en la practica <code>== != < ></code>.

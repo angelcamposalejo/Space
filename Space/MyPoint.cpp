@@ -65,6 +65,26 @@ MyPoint MyPoint::operator++(int not_used)
 	y += 1.0;
 	return tmp;
 }
+bool MyPoint::operator==(const MyPoint& point)const
+{
+	if (this->x != point.x)return false;
+	if (this->y != point.y)return false;
+	return true;
+}
+bool MyPoint::operator!=(const MyPoint& point)const
+{
+	if (this->x != point.x)return true;
+	if (this->y != point.y)return true;
+	return false;
+}
+bool MyPoint::operator<(const MyPoint& point)const
+{
+	return(this->x < point.x) && (this->y < point.y);
+}
+bool MyPoint::operator>(const MyPoint& point)const
+{
+	return(this->x > point.x) && (this->y > point.y);
+}
 void MyPoint::Copy(const MyPoint &init)
 {
 	this->x = init.x;

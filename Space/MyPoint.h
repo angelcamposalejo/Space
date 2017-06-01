@@ -20,6 +20,10 @@ public:
 	MyPoint operator--(int not_used);
 	MyPoint operator++();
 	MyPoint operator++(int not_used);
+	bool operator==(const MyPoint& point)const;
+	bool operator!=(const MyPoint& point)const;
+	bool operator<(const MyPoint& point)const;
+	bool operator>(const MyPoint& point)const;
 private:
 	void Copy(const MyPoint& init);
 };
