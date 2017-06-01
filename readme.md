@@ -26,3 +26,7 @@ Ejercicio de Operator Overloading, utilizando los operadores + - = en la clase M
 <h3>Versión 7</h3>
 <h5>01/06/2017</h5>
 Ejercicio de Inheritance, creación de una clase <code>My3DPoint</code> partiendo como base la clase <code>MyPoint</code>.
+
+<h3>Versión 8</h3>
+<h5>01/06/2017</h5>
+Ejercicio de Funciones virtuales, donde se declaran tres métodos de una clase como virtual para establecer que serán métodos con polimorfismo.

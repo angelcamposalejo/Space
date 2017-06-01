@@ -10,9 +10,9 @@ public:
 	double z;
 	double GetModulo();
 	double GetAbsModulo();
-	double GetMax();
-	double GetMin();
-	double GetAverage();
+	virtual double GetMax();
+	virtual double GetMin();
+	virtual double GetAverage();
 	double GetStd();
 	MyPoint& operator = (const MyPoint& init);
 	MyPoint operator+(const MyPoint& point);
