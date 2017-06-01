@@ -37,6 +37,34 @@ MyPoint MyPoint::operator-(const MyPoint& point)
 	temp.y = this->y - point.y;
 	return temp;
 }
+MyPoint MyPoint::operator--()
+{
+	MyPoint tmp = *this;
+	x -= 1.0;
+	y -= 1.0;
+	return tmp;
+}
+MyPoint MyPoint::operator--(int not_used)
+{
+	MyPoint tmp = *this;
+	x -= 1.0;
+	y -= 1.0;
+	return tmp;
+}
+MyPoint MyPoint::operator++()
+{
+	MyPoint tmp = *this;
+	x += 1.0;
+	y += 1.0;
+	return tmp;
+}
+MyPoint MyPoint::operator++(int not_used)
+{
+	MyPoint tmp = *this;
+	x += 1.0;
+	y += 1.0;
+	return tmp;
+}
 void MyPoint::Copy(const MyPoint &init)
 {
 	this->x = init.x;

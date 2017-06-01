@@ -16,6 +16,10 @@ public:
 	MyPoint& operator = (const MyPoint& init);
 	MyPoint operator+(const MyPoint& point);
 	MyPoint operator-(const MyPoint& point);
+	MyPoint operator--();
+	MyPoint operator--(int not_used);
+	MyPoint operator++();
+	MyPoint operator++(int not_used);
 private:
 	void Copy(const MyPoint& init);
 };

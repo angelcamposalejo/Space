@@ -12,13 +12,14 @@ void Space::Window_Open(Win::Event& e)
 	MyPoint a, b;
 	a.x = 2.0;
 	a.y = 3.0;
-	b.x = 1.0;
-	b.y = -2.0;
-	MyPoint c =b;
-	c.x -= 2.0;
-	MyPoint d = a+b-c;
-	Display(c);
-	Display(d);
+	b = a;
+	a.x++;
+	b.y--;
+	a--;
+	b++;
+	Display(a);
+	Display(b);
+	Display(a + b);
 }
 void Space::Display(MyPoint p)
 {
