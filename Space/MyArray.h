@@ -6,6 +6,7 @@ public:
 	MyArray(int contador);
 	~MyArray(void);
 	double *data;
+	int size;
 	bool operator==(const MyArray& areglo)const;
 	bool operator!=(const MyArray& areglo)const;
 	MyArray& operator = (const MyArray& init);

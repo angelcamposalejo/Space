@@ -3,6 +3,7 @@
 #include "MyPoint.h"
 #include "RandomDay.h"
 #include "MyArray.h"
+#include "My3DPoint.h"
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, LPTSTR cmdLine, int cmdShow) {
 	Space app;
 	return app.BeginDialog(IDI_Space, hInstance);
@@ -10,28 +11,22 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, LPTSTR cmdLine, int cmdSho
 
 void Space::Window_Open(Win::Event& e)
 {
-	MyArray x(3), z(3);
-	int i;
-	for (i = 0; i < 3; i++)
-	{
-		x.data[i] = 1 + i;
-		z.data[i] = 3 * i + 1;
-	}
-	Display(L"x", x);
-	Display(L"z", z);
-	MyArray a = x + z;
-	Display(L"a", a);
-	a = x - z;
-	Display(L"a", a);
+	My3DPoint a, b;
+	a.x = 10.0;
+	a.y = 12.0;
+	a.z = 25.5;
+	b.x = 4.4;
+	Display(a);
+	Display(b);
+	MyPoint c;
+	c.x = 18.8;
+	Display(c);
+	
 }
-void Space::Display(wstring variable, MyArray p)
+void Space::Display(MyPoint p)
 {
 	wstring texto;
-	for (int i = 0; i < 3; i++)
-	{
-		Sys::Format(texto, L"%s[%d]= %g\r\n", variable.c_str(),i, p.data[i]);
-		tbxSalida.Text += texto;
-	}
-
+	Sys::Format(texto, L"(%g, %g, %g)\r\n",p.x,p.y,p.z);
+	tbxSalida.Text += texto;
 }
 

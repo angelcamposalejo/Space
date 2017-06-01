@@ -6,6 +6,7 @@ MyPoint::MyPoint(void)
 {
 	x = 0.0;
 	y = 0.0;
+	z = 0.0;
 }
 
 
@@ -16,6 +17,7 @@ MyPoint::MyPoint(const MyPoint& init)
 {
 	this->x = 0.0;
 	this->y = 0.0;
+	this->z = 0.0;
 	Copy(init);
 }
 MyPoint& MyPoint::operator = (const MyPoint& init)
@@ -89,6 +91,7 @@ void MyPoint::Copy(const MyPoint &init)
 {
 	this->x = init.x;
 	this->y = init.y;
+	this->z = init.z;
 }
 
 double MyPoint::GetModulo()

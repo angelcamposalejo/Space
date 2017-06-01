@@ -5,6 +5,7 @@
 MyArray::MyArray(void)
 {
 	data = NULL;
+	size = 0;
 }
 
 
@@ -14,6 +15,7 @@ MyArray::~MyArray(void)
 MyArray::MyArray(int contador)
 {
 	data = new double[contador];
+	size = contador;
 }
 bool MyArray::operator==(const MyArray& arreglo)const
 {
@@ -42,9 +44,9 @@ void MyArray::Copy(const MyArray &init)
 }
 MyArray MyArray::operator+(const MyArray& arreglo)
 {
-	MyArray temp(3);
+	MyArray temp(this->size);
 	for (int i = 0; i < 3; i++)
-	{	
+	{
 		temp.data[i] = this->data[i] + arreglo.data[i];
 	}
 	return temp;

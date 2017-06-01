@@ -7,6 +7,7 @@ public:
 	~MyPoint(void);
 	double x;
 	double y;
+	double z;
 	double GetModulo();
 	double GetAbsModulo();
 	double GetMax();
