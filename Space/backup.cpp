@@ -1,19 +1,35 @@
 #include "stdafx.h"  //________________________________________ Space.cpp
 #include "Space.h"
 #include "MyPoint.h"
-
-int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE , LPTSTR cmdLine, int cmdShow){
+#include "RandomDay.h"
+#include "MyArray.h"
+int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, LPTSTR cmdLine, int cmdShow) {
 	Space app;
 	return app.BeginDialog(IDI_Space, hInstance);
 }
 
 void Space::Window_Open(Win::Event& e)
 {
-	MyPoint p;
-	p.x = 1.0;
-	p.y = 2.0;
+	MyArray x(3),z(3);
+	int i;
+	for (i = 0; i < 3; i++)
+	{
+		x.data[i] = 1 + i;
+		z.data[i] = 3*i+1;
+	}
+	Display(L"x", x);
+	Display(L"z", z);
+	MyArray a = x + z;
+	Display(L"a", a);
+}
+void Space::Display(wstring variable,MyArray p)
+{
 	wstring texto;
-	Sys::Format(texto, L"Modulo: %g\r\n", p.GetModulo());
+	for (int i = 0; i < 3; i++)
+	{
+		Sys::Format(texto,L"%s %g\r\n",variable.c_str(), p.data[i]);
+		tbxSalida.Text += texto;
+	}
 	
 }
 

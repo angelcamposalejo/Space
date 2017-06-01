@@ -8,5 +8,10 @@ public:
 	double *data;
 	bool operator==(const MyArray& areglo)const;
 	bool operator!=(const MyArray& areglo)const;
+	MyArray& operator = (const MyArray& init);
+	MyArray operator+(const MyArray& point);
+	MyArray operator-(const MyArray& point);
+private:
+	void Copy(const MyArray& init);
 };
 
